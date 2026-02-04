@@ -1,0 +1,3 @@
+# .nojekyll
+# This file tells GitHub Pages to bypass Jekyll processing.
+# Essential for sites using folders starting with underscore (e.g. _next) or specific asset structures.

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常見問題 | 優生 Ubeeps - 再生醫學諮詢</title>
+    <meta name="description" content="彙整關於幹細胞治療、ImStem 技術、華大基因檢測與跨境醫療的常見疑問。專業解答，讓您安心決策。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490', // Cyan 700
+                        secondary: '#155e75', // Cyan 800
+                        accent: '#06b6d4', // Cyan 500
+                        light: '#ecfeff', // Cyan 50
+                        'brand-dark': '#0C2D37', // Custom Dark Background
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        .faq-answer { display: none; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-dark shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <!-- Logo Placeholder -->
+                        <img src="images/logo.png" alt="Ubeeps Logo" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        <span class="text-2xl font-bold text-white tracking-wider" style="display:none">Ubeeps <span class="text-sm font-normal text-gray-200">優生醫療諮詢</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent transition">首頁</a>
+                    <a href="about.html" class="text-white hover:text-accent transition">關於我們</a>
+                    <a href="science.html" class="text-white hover:text-accent transition">幹細胞科學</a>
+                    <a href="index.html#applications" class="text-white hover:text-accent transition">臨床應用</a>
+                    <a href="faq.html" class="text-accent font-bold transition">常見問題</a>
+                    <a href="news.html" class="text-white hover:text-accent transition">最新消息</a>
+                    <a href="index.html#contact" class="bg-white text-primary px-6 py-2 rounded-full hover:bg-gray-100 transition shadow-lg">立即諮詢</a>
+                </div>
+                <!-- Mobile menu button placeholder -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">關於我們</a>
+                <a href="science.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">幹細胞科學</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">臨床應用</a>
+                <a href="faq.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">常見問題</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">最新消息</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-brand-dark bg-white hover:bg-gray-100 mt-4 text-center transition">立即諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-brand-dark to-primary text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-6">常見問題解答 (FAQ)</h1>
+            <p class="text-xl text-cyan-100 max-w-2xl mx-auto">
+                我們整理了關於技術、流程、安全性與費用的常見疑問，協助您更深入了解再生醫學的可能性。
+            </p>
+        </div>
+    </header>
+
+    <!-- FAQ Content -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Category 0: Basics (New) -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-primary pl-4">幹細胞基礎知識</h2>
+                
+                <div class="space-y-4">
+                    <!-- Q0-1 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">什麼是幹細胞？它為什麼能治病？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>簡單來說，幹細胞就是身體的「原始細胞」或「種子細胞」。它們有兩個神奇的能力：一是能自我複製，二是能變成身體各種不同的細胞（如心臟細胞、神經細胞）。當我們生病或受傷時，幹細胞可以透過「歸巢效應」找到受損部位，並分化成新的健康細胞來替代壞死細胞，就像是身體的維修工程師。</p>
+                        </div>
+                    </div>
+
+                    <!-- Q0-2 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">治療過程會痛嗎？需要開刀嗎？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>大多數的幹細胞治療都是<span class="font-bold text-primary">微創</span>的，不需要開大刀。通常是透過靜脈輸液（類似打點滴）或動脈導管介入（類似心導管檢查）的方式進行。過程通常只會有輕微的針扎感，我們會有專業麻醉師協助，確保您在舒適無痛的狀態下完成治療。</p>
+                        </div>
+                    </div>
+
+                    <!-- Q0-3 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">年紀大的人也可以做嗎？有沒有年齡限制？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>原則上沒有絕對的年齡上限。事實上，年長者因為自身修復能力下降，往往更需要幹細胞治療的幫助。不過，治療前我們會進行詳細的身體檢查（如心肺功能、凝血功能等），只要身體狀況符合基本安全標準，高齡長者也能安全接受治療。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 1: Core Technology -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-primary pl-4">核心技術與安全性</h2>
+                
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">為什麼選擇人胚幹細胞 (hESC) 而非自體脂肪幹細胞？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>研究比較發現，自體來源幹細胞（如脂肪間充質幹細胞）雖然安全，但分化能力有限（亞全能），且活性隨年齡下降。而 hESC 具有<span class="font-bold text-primary">全能分化潛力</span>，能轉化為功能更完整、葡萄糖感應更靈敏的胰島 β 細胞，且質量更均一，避免了個體差異帶來的療效波動。</p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">人胚幹細胞 (hESC) 安全嗎？會不會有致癌風險？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>這是一個非常重要的問題。我們採用的 ImStem 技術經過嚴格的定向分化與純化程序，確保輸入體內的是<span class="font-bold text-primary">功能成熟的細胞</span>（如胰島細胞或神經前驅細胞），而非未分化的原始幹細胞。這大幅降低了致瘤風險。此外，珠海醫學中心擁有符合 GMP 標準的實驗室，每一批細胞在出廠前都需經過數十項安全檢測。</p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 (New) -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">華大基因 (BGI) 的細胞儲存與 ImStem 的治療有什麼不同？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>兩者是相輔相成的健康策略：</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>華大基因 (BGI) 細胞儲存</strong>：側重於<span class="font-bold">「備份」</span>。在您健康時，預先將年輕、活性強的免疫細胞或幹細胞凍存起來，作為未來的「生物保險」。</li>
+                                <li><strong>ImStem 治療</strong>：側重於<span class="font-bold">「應用與逆轉」</span>。利用專利的 PL11S-TMSC 技術，針對已經發生的退化或疾病（如糖尿病、關節炎）進行修復。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Treatment & Efficacy -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-primary pl-4">臨床效果與適應症</h2>
+                
+                <div class="space-y-4">
+                    <!-- Q4 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">糖尿病治療真的可以「斷根」嗎？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>再生醫學的目標是「逆轉病程」。透過修復受損的胰島 β 細胞，許多患者在治療後可以顯著減少甚至停止胰島素注射，血糖控制回歸平穩。醫學上我們稱之為<span class="font-bold text-primary">「功能性治癒」(Functional Cure)</span>。雖然這不代表永久免疫於生活習慣帶來的風險，但臨床數據顯示，早期介入的患者有極高機率實現長期的不依賴藥物生活。</p>
+                        </div>
+                    </div>
+
+                    <!-- Q5 (New) -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">治療後多久可以看到效果？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>效果因人而異，取決於疾病類型與個人體質：</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>精神與體力</strong>：通常在治療後 1-2 週內會有明顯改善（睡眠變好、疲勞感消失）。</li>
+                                <li><strong>客觀指標</strong>：如血糖、糖化血色素或發炎指數，通常在 1-3 個月內呈現顯著的改善趨勢。</li>
+                                <li><strong>結構修復</strong>：如關節軟骨再生，可能需要 3-6 個月的時間進行組織修復。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Q6 (New) -->
+                     <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">治療過程會有副作用嗎？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>幹細胞治療屬於微創或非侵入性治療，副作用極少。少數患者可能會在注射部位出現輕微紅腫或短暫的低燒（免疫反應），通常在 24-48 小時內會自然消退。我們會在治療全程進行監控，確保您的安全。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Process & Logistics -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-primary pl-4">跨境醫療與行程安排</h2>
+                
+                <div class="space-y-4">
+                    <!-- Q7 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">為什麼要到珠海進行治療？香港不行嗎？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>目前香港的細胞治療法規仍在發展中，而中國大陸在「先行先試」政策下，對於幹細胞臨床應用的准入較為開放且成熟。我們的珠海合作中心擁有符合 GMP 標準的實驗室與豐富的臨床案例，能提供目前香港尚未普及的先進療程（如動脈導管精準遞送）。此外，珠海中心是 ImStem 的全球綠通中心，擁有最完整的技術支持。</p>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">整個療程需要多久？我要在珠海待幾天？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>一般療程約需 3-5 天：</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li><strong>第一天</strong>：報到、入住與詳細術前檢查。</li>
+                                <li><strong>第二天</strong>：進行細胞介入治療（過程約 1-2 小時，微創無痛）。</li>
+                                <li><strong>第三天</strong>：觀察與術後護理，若無不適即可出院。</li>
+                            </ul>
+                            <p class="mt-2">對於更複雜的案例，醫師可能會建議延長觀察期。我們提供專車接送（港珠澳大橋）與住宿安排服務，讓您的跨境醫療之旅輕鬆無憂。</p>
+                        </div>
+                    </div>
+
+                    <!-- Q9 (New) -->
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-gray-800">費用大約是多少？</span>
+                            <i class="fas fa-chevron-down text-primary faq-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            <p>由於每位患者的狀況（適應症、嚴重程度）不同，所需的細胞種類、劑量與療程次數也不同，因此費用會有差異。我們建議您先填寫<a href="index.html#contact" class="text-primary font-bold underline">線上評估表</a>，並提供相關病歷資料，由專家為您提供客觀的方案報價。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-primary rounded-2xl p-8 md:p-12 text-center text-white shadow-xl">
+                <h2 class="text-3xl font-bold mb-4">還有其他問題嗎？</h2>
+                <p class="text-lg text-cyan-100 mb-8 max-w-2xl mx-auto">
+                    我們的醫療顧問隨時準備為您解答。歡迎透過電話或線上表單與我們聯繫。
+                </p>
+                <a href="index.html#contact" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-cyan-50 transition shadow-md">
+                    聯繫我們
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Ubeeps 優生醫療</h3>
+                    <p class="text-sm">致力於推動再生醫學資訊透明化，連結病患與合規醫療資源的專業平台。</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">回首頁</a></li>
+                        <li><a href="science.html" class="hover:text-white">幹細胞科學</a></li>
+                        <li><a href="index.html#applications" class="hover:text-white">臨床案例</a></li>
+                        <li><a href="faq.html" class="hover:text-white">常見問題</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">聯絡資訊</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> ubeeps@gmail.com</li>
+                        
+                        <li><a href="https://wa.me/85263810907" target="_blank" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp: +852 6381 0907</a></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 合作中心: 珠海 ImStem / 華大基因 (BGI)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">免責聲明</h3>
+                    <p class="text-xs leading-relaxed">
+                        本網站內容僅供衛教資訊參考，不能取代專業醫療診斷。具體治療方案需由醫師親自評估。
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs">
+                &copy; 2024 Ubeeps. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all currently active items
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // If it wasn't active before, open it
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
+    <!-- Chatbot Script -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

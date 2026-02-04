@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>優生 Ubeeps | 專業再生醫學諮詢平台 - 科學、中立、合規</title>
+    <meta name="description" content="以幹細胞技術為核心，提供可信賴的國際再生醫學資訊。協助糖尿病、關節炎、自體免疫疾病患者評估專屬修復方案。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490', // Cyan 700
+                        secondary: '#155e75', // Cyan 800
+                        accent: '#06b6d4', // Cyan 500
+                        light: '#ecfeff', // Cyan 50
+                        'brand-dark': '#0C2D37', // Custom Dark Background
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        /* 移除舊的 hero-bg 樣式，改用新的 slider 結構 */
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-dark shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <!-- Logo Placeholder -->
+                        <img src="images/logo.png" alt="Ubeeps Logo" class="h-12 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        <span class="text-2xl font-bold text-white tracking-wider" style="display:none">Ubeeps <span class="text-sm font-normal text-gray-200">優生醫療諮詢</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-accent font-bold transition">首頁</a>
+                    <a href="about.html" class="text-white hover:text-accent transition">關於我們</a>
+                    <a href="science.html" class="text-white hover:text-accent transition">幹細胞科學</a>
+                    <a href="applications.html" class="text-white hover:text-accent transition">臨床應用</a>
+                    <a href="faq.html" class="text-white hover:text-accent transition">常見問題</a>
+                    <a href="news.html" class="text-white hover:text-accent transition">最新消息</a>
+                    <a href="#contact" class="bg-white text-primary px-6 py-2 rounded-full hover:bg-gray-100 transition shadow-lg">立即諮詢</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">關於我們</a>
+                <a href="science.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">幹細胞科學</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">臨床應用</a>
+                <a href="faq.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">常見問題</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">最新消息</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-brand-dark bg-white hover:bg-gray-100 mt-4 text-center transition">立即諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<header class="relative h-screen flex items-center overflow-hidden">
+    <!-- Background Slider -->
+    <div id="hero-slider" class="absolute inset-0 z-0">
+        <!-- Slide 1: 具體實驗室場景 (專業科研人員與設備) -->
+        <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: url('https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+        <!-- Slide 2: 顯微鏡下的細胞 -->
+        <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+        <!-- Slide 3: 明亮的診間環境 -->
+        <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+    </div>
+    
+    <!-- Overlay for readability (Brighter and clearer) -->
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/60 via-primary/40 to-primary/10 z-0"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            突破傳統治療瓶頸<br>啟動身體<span class="text-cyan-300 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] font-extrabold">自我修復</span>的力量
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 max-w-3xl font-light text-gray-100">
+            科學為本 · 中立導向 · 合規透明<br>
+            連結國際頂尖再生醫學資源，為您的健康尋找新轉機。
+        </p>
+        <div class="flex flex-col md:flex-row justify-start gap-4">
+            <a href="#contact" class="bg-secondary hover:bg-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition shadow-lg text-lg">
+                免費評估方案
+            </a>
+            <a href="science.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-4 px-8 rounded-lg transition text-lg">
+                了解治療原理
+            </a>
+        </div>
+    </div>
+    <!-- Scroll Down Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <i class="fas fa-chevron-down text-white text-2xl"></i>
+    </div>
+</header>
+
+<script>
+    // Hero Slider Script
+    const slides = document.querySelectorAll('#hero-slider .slide');
+    let currentSlide = 0;
+    
+    // Preload images to avoid flickering
+    slides.forEach(slide => {
+        const bg = slide.style.backgroundImage;
+        if(bg) {
+            const url = bg.match(/url\(['"]?(.*?)['"]?\)/)[1];
+            new Image().src = url;
+        }
+    });
+
+    setInterval(() => {
+        // Fade out current
+        slides[currentSlide].classList.remove('opacity-100');
+        slides[currentSlide].classList.add('opacity-0');
+        
+        // Update index
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Fade in next
+        slides[currentSlide].classList.remove('opacity-0');
+        slides[currentSlide].classList.add('opacity-100');
+    }, 5000); // Change every 5 seconds
+</script>
+
+    <!-- Value Proposition (Why Ubeeps?) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">為什麼選擇 Ubeeps？</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-8 bg-gray-50 rounded-xl hover:shadow-xl transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-light rounded-full flex items-center justify-center mb-6 mx-auto text-primary">
+                        <i class="fas fa-flask text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">科學實證導向</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        拒絕誇大療效。我們以最新國際醫學文獻 (PubMed) 為基石，提供客觀、清晰的細胞治療機制解釋，讓您清楚知道治療的潛力與極限。
+                    </p>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl hover:shadow-xl transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-light rounded-full flex items-center justify-center mb-6 mx-auto text-primary">
+                        <i class="fas fa-hospital-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">嚴選合規醫療</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        安全是唯一底線。本平台僅轉介至符合當地衛生法規（如台灣特管辦法、日本再生醫療法）的合法醫療機構與專科醫師。
+                    </p>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl hover:shadow-xl transition duration-300 border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-light rounded-full flex items-center justify-center mb-6 mx-auto text-primary">
+                        <i class="fas fa-hand-holding-heart text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">中立第三方諮詢</h3>
+                    <p class="text-gray-600 text-center leading-relaxed">
+                        我們不是推銷員，而是您的醫療顧問。協助整理您的病歷資料，結構化諮詢需求，讓醫師能更精準地評估您的適用性。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Teaser Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="images/stem_cell_science.jpg" alt="Stem Cell Science" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">再生醫學新紀元</h2>
+                    <p class="text-xl text-primary font-bold mb-6">從「延緩衰老」到「逆轉時光」</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        我們引進鄭永基博士團隊研發的 <span class="font-bold">PL11S-TMSC 人胚共生工程技術</span>，這不僅僅是傳統的幹細胞治療，而是一場細胞層次的生命革命。
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">獨家共生技術</h4>
+                                <p class="text-sm text-gray-600">解決免疫排斥問題，實現異體細胞的完美共存。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">精準動脈遞送</h4>
+                                <p class="text-sm text-gray-600">突破血管屏障，將活性細胞直接輸送至器官深處。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="science.html" class="inline-flex items-center text-primary font-bold hover:text-secondary transition group">
+                        深入了解科學原理 <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Partners / Medical Resources Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">連結國際頂尖醫療資源</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    我們為您嚴選全球領先的再生醫學與基因檢測機構。無論是<span class="font-bold text-primary">細胞逆齡治療</span>還是<span class="font-bold text-primary">精準基因健康管理</span>，Ubeeps 提供多方位的頂級選擇，滿足您不同的健康需求。
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Option 1: ImStem (Treatment Focus) -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="images/imstem_building.jpg" alt="ImStem Center" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">治療中心</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">珠海 ImStem 醫學中心</h3>
+                        <p class="text-sm text-primary font-bold mb-4 uppercase tracking-wider">全球綠通中心 · 人胚共生工程</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 h-24 overflow-hidden">
+                            專注於「PL11S-TMSC 人胚共生工程」的臨床轉化。提供符合 GMP 標準的細胞製備與治療環境，擁有獨家 5S 靶向連篩技術，是糖尿病逆轉與器官再造的首選基地。
+                        </p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-center text-gray-700 text-sm">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>鄭永基博士專利技術</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 text-sm">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>5S 標準化治療流程</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 text-sm">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>針對糖尿病、神經修復與抗衰老</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full text-center bg-primary text-white font-bold py-3 rounded-lg hover:bg-secondary transition shadow-md">
+                            預約 ImStem 參訪
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Option 2: BGI (Genomics Focus) -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="images/bgi_building.jpg" alt="BGI Center" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">基因檢測與儲存</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">華大基因 (BGI)</h3>
+                        <p class="text-sm text-accent font-bold mb-4 uppercase tracking-wider">全球領先的基因組學機構</p>
+                        <p class="text-gray-600 leading-relaxed mb-6 h-24 overflow-hidden">
+                            作為全球最大的基因組學研發機構之一，華大基因提供最頂尖的精準醫學檢測與國家級細胞儲存服務。從基因層面預測健康風險，為您的未來健康資產提供最高規格的保障。
+                        </p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-center text-gray-700 text-sm">
+                                <i class="fas fa-check-circle text-accent mr-2"></i>
+                                <span>國家基因庫 (CNGB) 營運方</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 text-sm">
+                                <i class="fas fa-check-circle text-accent mr-2"></i>
+                                <span>全基因組精準檢測</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 text-sm">
+                                <i class="fas fa-check-circle text-accent mr-2"></i>
+                                <span>高品質細胞儲存 (細胞銀行)</span>
+                            </li>
+                        </ul>
+                        <a href="https://www.bgi.com/" target="_blank" class="block w-full text-center border-2 border-accent text-accent font-bold py-3 rounded-lg hover:bg-accent hover:text-white transition shadow-md">
+                            了解更多 (BGI 官網)
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <p class="text-gray-500 mb-4">我們深知每位客戶的需求不同，因此提供多元且頂尖的醫療路徑供您選擇。</p>
+                 <a href="#contact" class="inline-flex items-center text-primary font-bold hover:underline">
+                    諮詢哪種方案適合我？ <i class="fas fa-arrow-right ml-2"></i>
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications (Condition Specific) -->
+    <section id="applications" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">臨床應用與適應症</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">針對不同的退化性與慢性疾病，再生醫學提供了傳統藥物與手術之外的新選擇。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/knee_xray.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Joints">
+                        <div class="absolute bottom-0 left-0 bg-primary text-white text-xs px-3 py-1">骨科</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">退化性關節炎</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            透過注射間質幹細胞，促進軟骨修復並減緩發炎疼痛。無需置換人工關節的另一種保膝選擇。
+                        </p>
+                        <a href="applications.html#joints" class="text-primary text-sm font-bold uppercase tracking-wide">了解方案 <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 ring-2 ring-primary ring-offset-2">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/diabetes_finger.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Diabetes">
+                        <div class="absolute bottom-0 left-0 bg-primary text-white text-xs px-3 py-1">代謝科 (重點項目)</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">糖尿病：治癒新契機</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            <strong><i class="fas fa-star text-yellow-400 mr-1"></i> ImStem 胰島 5S 連篩技術</strong><br>
+                            利用「胰腺內動脈遞送」技術，將 hESC 分化的胰島β細胞精準植入。臨床數據顯示：治療組的<span class="text-primary font-bold">血糖控制與糖耐量反應</span>顯著優於傳統治療，有望逆轉病程。
+                        </p>
+                        <a href="applications.html#diabetes" class="text-primary text-sm font-bold uppercase tracking-wide">深入了解治癒路徑 <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/dna_helix.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Immune">
+                        <div class="absolute bottom-0 left-0 bg-primary text-white text-xs px-3 py-1">免疫科</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">自體免疫疾病</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            調節失控的免疫系統。針對類風濕性關節炎、紅斑性狼瘡、乾癬等，尋求類固醇以外的緩解途徑。
+                        </p>
+                        <a href="applications.html#immune" class="text-primary text-sm font-bold uppercase tracking-wide">了解方案 <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/neural_network.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Neurology">
+                        <div class="absolute bottom-0 left-0 bg-primary text-white text-xs px-3 py-1">神經科</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">神經系統修復</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            中風後遺症復健、脊髓損傷、帕金森氏症。透過神經再生因子，協助受損神經網絡重建連結。
+                        </p>
+                        <a href="applications.html#neurology" class="text-primary text-sm font-bold uppercase tracking-wide">了解方案 <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/active_senior_woman.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Anti-aging">
+                        <div class="absolute bottom-0 left-0 bg-primary text-white text-xs px-3 py-1">預防醫學</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">抗衰老與亞健康</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            針對慢性疲勞、睡眠障礙及整體機能衰退。由內而外活化細胞，提升身體自我修復力與防禦力。
+                        </p>
+                        <a href="applications.html#anti-aging" class="text-primary text-sm font-bold uppercase tracking-wide">了解方案 <i class="fas fa-chevron-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 bg-gray-50 flex items-center justify-center cursor-pointer">
+                    <a href="applications.html" class="block w-full h-full">
+                        <div class="text-center p-6 h-full flex flex-col items-center justify-center">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto text-primary shadow-sm">
+                                <i class="fas fa-plus text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">查看更多適應症</h3>
+                            <p class="text-gray-500 text-sm">探索完整的再生醫學應用領域</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">標準化服務流程</h2>
+                <p class="text-gray-600">以細胞治療為例，我們遵循 ImStem 5S 標準，從檢測到應用，確保每一環節的合規與安全。</p>
+            </div>
+            <div class="grid md:grid-cols-5 gap-4">
+                <!-- Step 1 -->
+                <div class="relative text-center p-4">
+                    <div class="w-16 h-16 bg-white border-4 border-primary rounded-full flex items-center justify-center text-xl font-bold text-primary mx-auto mb-4 shadow-sm">1</div>
+                    <h3 class="font-bold text-md mb-2">諮詢與預約</h3>
+                    <p class="text-gray-500 text-xs">前期諮詢 (Pre-consultation) 並預約前往珠海中心。</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative text-center p-4">
+                    <div class="w-16 h-16 bg-white border-4 border-primary rounded-full flex items-center justify-center text-xl font-bold text-primary mx-auto mb-4 shadow-sm">2</div>
+                    <h3 class="font-bold text-md mb-2">檢測與評估</h3>
+                    <p class="text-gray-500 text-xs">進行全面採集檢測與醫學評估，制定個人化方案。</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative text-center p-4">
+                    <div class="w-16 h-16 bg-white border-4 border-primary rounded-full flex items-center justify-center text-xl font-bold text-primary mx-auto mb-4 shadow-sm">3</div>
+                    <h3 class="font-bold text-md mb-2">簽約與採集</h3>
+                    <p class="text-gray-500 text-xs">簽署合約後，採集皮膚組織與種子細胞。</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative text-center p-4">
+                    <div class="w-16 h-16 bg-white border-4 border-primary rounded-full flex items-center justify-center text-xl font-bold text-primary mx-auto mb-4 shadow-sm">4</div>
+                    <h3 class="font-bold text-md mb-2">匹配與逆轉</h3>
+                    <p class="text-gray-500 text-xs">進行細胞匹配質檢，並啟動細胞還原逆齡程序。</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="relative text-center p-4">
+                    <div class="w-16 h-16 bg-white border-4 border-primary rounded-full flex items-center justify-center text-xl font-bold text-primary mx-auto mb-4 shadow-sm">5</div>
+                    <h3 class="font-bold text-md mb-2">儲存與應用</h3>
+                    <p class="text-gray-500 text-xs">完成製備，進行臨床應用或長期儲存。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section Removed (Moved to faq.html) -->
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="py-20 bg-secondary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">不確定是否適合？</h2>
+            <p class="text-xl mb-10 text-gray-200">
+                每個人的身體狀況都是獨一無二的。立即填寫簡易評估表，讓我們為您進行初步分析。
+            </p>
+            <form id="contact-form" class="bg-white rounded-xl p-8 shadow-2xl max-w-2xl mx-auto text-left" onsubmit="handleFormSubmit(event)">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">姓名</label>
+                        <input class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-700" id="name" type="text" placeholder="您的稱呼" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">聯絡電話</label>
+                        <input class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-700" id="phone" type="text" placeholder="+852 xxxx-xxxx" required>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">電子郵件</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-700" id="email" type="email" placeholder="name@example.com" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="condition">主要困擾/疾病</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-700" id="condition">
+                        <option>請選擇...</option>
+                        <option>退化性關節炎 / 膝蓋疼痛</option>
+                        <option>糖尿病 / 傷口不癒</option>
+                        <option>中風後遺症 / 神經損傷</option>
+                        <option>自體免疫疾病 (濕疹、乾癬...)</option>
+                        <option>抗衰老 / 預防醫學</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+                <div class="mb-8">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">簡述狀況</label>
+                    <textarea class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-gray-700" id="message" rows="4" placeholder="請簡略描述您的症狀或疑問..." required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-cyan-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 shadow-lg">
+                    送出評估申請
+                </button>
+                <p class="text-xs text-gray-400 mt-4 text-center">您的資料將嚴格保密，僅用於醫療諮詢評估。</p>
+            </form>
+
+            <script>
+                function handleFormSubmit(event) {
+                    event.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const phone = document.getElementById('phone').value;
+                    const email = document.getElementById('email').value;
+                    const condition = document.getElementById('condition').value;
+                    const message = document.getElementById('message').value;
+                    
+                    const subject = `[Ubeeps 諮詢] 來自 ${name} 的評估申請`;
+                    const body = `姓名: ${name}%0D%0A電話: ${phone}%0D%0AEmail: ${email}%0D%0A主要困擾: ${condition}%0D%0A%0D%0A簡述狀況:%0D%0A${message}`;
+                    
+                    // Create mailto link
+                    const mailtoLink = `mailto:ubeeps@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`; // No encodeURIComponent for body to keep line breaks working in some clients, but standard practice is encodeURIComponent. Let's try simple string first, actually standard is encodeURIComponent.
+                    
+                    // Let's use the standard way
+                    window.location.href = `mailto:ubeeps@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(decodeURIComponent(body))}`;
+                    
+                    // Show simple alert
+                    alert('感謝您的填寫！系統將為您開啟郵件軟體，請確認內容後送出。');
+                }
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Ubeeps 優生醫療</h3>
+                    <p class="text-sm">致力於推動再生醫學資訊透明化，連結病患與合規醫療資源的專業平台。</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-white">關於我們</a></li>
+                        <li><a href="faq.html" class="hover:text-white">常見問題</a></li>
+                        <li><a href="science.html" class="hover:text-white">幹細胞科學</a></li>
+                        <li><a href="#applications" class="hover:text-white">臨床案例</a></li>
+                        <li><a href="news.html" class="hover:text-white">最新消息</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">聯絡資訊</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> ubeeps@gmail.com</li>
+                        
+                        <li><a href="https://wa.me/85263810907" target="_blank" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp: +852 6381 0907</a></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 珠海中心: ImStem 醫學中心 (珠海市香洲區)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">免責聲明</h3>
+                    <p class="text-xs leading-relaxed">
+                        本網站內容僅供衛教資訊參考，不能取代專業醫療診斷。具體治療方案需由醫師親自評估。
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs">
+                &copy; 2024 Ubeeps. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Script -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

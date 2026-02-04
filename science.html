@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幹細胞科學 | 優生 Ubeeps - 深入了解再生醫學</title>
+    <meta name="description" content="深入解析人胚幹細胞(hESC)與間充質幹細胞(MSC)的科學原理。探討心臟再生、神經修復與抗衰老的細胞機制。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490', // Cyan 700
+                        secondary: '#155e75', // Cyan 800
+                        accent: '#06b6d4', // Cyan 500
+                        light: '#ecfeff', // Cyan 50
+                        'brand-dark': '#0C2D37', // Custom Dark Background
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-dark shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="images/logo.png" alt="Ubeeps Logo" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        <span class="text-2xl font-bold text-white tracking-wider" style="display:none">Ubeeps <span class="text-sm font-normal text-gray-200">優生醫療諮詢</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent transition">首頁</a>
+                    <a href="about.html" class="text-white hover:text-accent transition">關於我們</a>
+                    <a href="science.html" class="text-accent font-bold transition">幹細胞科學</a>
+                    <a href="applications.html" class="text-white hover:text-accent transition">臨床應用</a>
+                    <a href="faq.html" class="text-white hover:text-accent transition">常見問題</a>
+                    <a href="news.html" class="text-white hover:text-accent transition">最新消息</a>
+                    <a href="index.html#contact" class="bg-white text-primary px-6 py-2 rounded-full hover:bg-gray-100 transition shadow-lg">立即諮詢</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">關於我們</a>
+                <a href="science.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">幹細胞科學</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">臨床應用</a>
+                <a href="faq.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">常見問題</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">最新消息</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-brand-dark bg-white hover:bg-gray-100 mt-4 text-center transition">立即諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-brand-dark to-primary text-white pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('images/science_cells.jpg')] bg-cover bg-center"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">探索生命的源頭：幹細胞科學</h1>
+            <p class="text-xl text-cyan-100 max-w-3xl mx-auto">
+                從單一顆細胞到複雜的器官系統，了解再生醫學如何利用身體的原始力量，修復損傷、逆轉衰老。
+            </p>
+        </div>
+    </header>
+
+    <!-- Section 1: What are Stem Cells? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">什麼是幹細胞？</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        幹細胞 (Stem Cells) 是人體的「原始建築材料」，具有兩大關鍵特性：
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-light rounded-full flex items-center justify-center text-primary mt-1">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-gray-800">自我更新能力</h3>
+                                <p class="text-gray-600 text-sm">能夠不斷分裂產生相同的細胞，維持細胞庫的數量。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-light rounded-full flex items-center justify-center text-primary mt-1">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-gray-800">多向分化潛能</h3>
+                                <p class="text-gray-600 text-sm">在特定信號誘導下，能轉變為血液、骨骼、神經、肌肉等多種人體組織細胞。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="images/science_cells.jpg" alt="Stem Cells under Microscope" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p class="text-white text-sm">顯微鏡下的幹細胞群落</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Mechanisms -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">幹細胞如何修復身體？</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">它們不僅僅是「補充」細胞，更是身體的「維修工程師」。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-accent">
+                    <div class="text-4xl text-accent mb-6"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-4">歸巢效應 (Homing)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        受損組織會釋放特定的化學信號（如 SDF-1）。幹細胞就像裝有導航系統的救護車，能循著這些信號自動遷移至受傷部位。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-primary">
+                    <div class="text-4xl text-primary mb-6"><i class="fas fa-hand-holding-medical"></i></div>
+                    <h3 class="text-xl font-bold mb-4">旁分泌作用 (Paracrine)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        幹細胞到達患部後，會分泌生長因子、細胞激素與外泌體 (Exosomes)，喚醒周圍沈睡的自體細胞，促進血管新生並抑制發炎。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-secondary">
+                    <div class="text-4xl text-secondary mb-6"><i class="fas fa-random"></i></div>
+                    <h3 class="text-xl font-bold mb-4">分化再生 (Differentiation)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        在微環境的誘導下，幹細胞能直接轉化為所需的組織細胞（如心肌細胞、胰島細胞），替代已死亡或功能喪失的細胞。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Heart Focus (User Requested) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-2 relative rounded-2xl overflow-hidden shadow-lg h-64 group">
+                            <img src="images/science_heart.jpg" alt="Heart Regeneration" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <span class="text-xs font-bold bg-primary px-2 py-1 rounded mb-2 inline-block">核心技術</span>
+                                <h3 class="text-xl font-bold">心臟再生</h3>
+                            </div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-lg h-48 group">
+                            <img src="images/science_heart_2.jpg" alt="Vascular Repair" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-lg h-48 group">
+                            <img src="images/science_heart_3.jpg" alt="Microscope View" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1530026405186-ed1f139313f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="inline-block bg-red-100 text-red-600 font-bold px-4 py-1 rounded-full text-sm mb-4">
+                        重點應用領域
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">從「心」出發：幹細胞與心血管修復</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        心臟是人體最繁忙的器官，但其自我修復能力極低。一旦發生心肌梗塞，受損的心肌往往會纖維化（結疤），導致心臟衰竭。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        我們的技術專注於利用 <span class="font-bold text-primary">hESC 分化之心肌前驅細胞</span>，透過冠狀動脈精準遞送：
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-heartbeat text-red-500 mr-3 text-xl"></i>
+                            <span><span class="font-bold">再生心肌</span>：直接分化為跳動的心肌細胞，替代壞死組織。</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-tint text-red-500 mr-3 text-xl"></i>
+                            <span><span class="font-bold">血管新生</span>：促進冠狀動脈側支循環建立，改善心肌缺血。</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-shield-alt text-red-500 mr-3 text-xl"></i>
+                            <span><span class="font-bold">逆轉纖維化</span>：分泌抗纖維化因子，軟化僵硬的心臟壁。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Technology Deep Dive (Moved from Index) -->
+    <section class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary rounded-full opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-accent rounded-full opacity-20 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">我們的技術壁壘：PL11S-TMSC</h2>
+                <p class="text-cyan-100 max-w-2xl mx-auto">
+                    鄭永基博士團隊歷經 20 年研發，突破了傳統幹細胞治療的「免疫排斥」與「腫瘤風險」兩大瓶頸。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/20 transition">
+                    <div class="text-3xl text-accent mb-4"><i class="fas fa-fingerprint"></i></div>
+                    <h3 class="text-xl font-bold mb-2">專利共生工程</h3>
+                    <p class="text-sm text-gray-300">獨創的「人胚共生」培養技術，讓細胞在體外模擬體內微環境，活性更強。</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/20 transition">
+                    <div class="text-3xl text-accent mb-4"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-xl font-bold mb-2">精準動脈遞送</h3>
+                    <p class="text-sm text-gray-300">避開肺部首過效應 (First-pass effect)，將細胞濃度最大化地送達病灶。</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/20 transition">
+                    <div class="text-3xl text-accent mb-4"><i class="fas fa-check-double"></i></div>
+                    <h3 class="text-xl font-bold mb-2">5S 標準化製程</h3>
+                    <p class="text-sm text-gray-300">從採集到回輸，經過 10 道嚴格工序，確保每一批細胞的品質一致性。</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/20 transition">
+                    <div class="text-3xl text-accent mb-4"><i class="fas fa-user-shield"></i></div>
+                    <h3 class="text-xl font-bold mb-2">高安全性</h3>
+                    <p class="text-sm text-gray-300">經過嚴格的致瘤性檢測，並透過定向分化消除未分化細胞，確保長期安全。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Ubeeps 優生醫療</h3>
+                    <p class="text-sm">致力於推動再生醫學資訊透明化，連結病患與合規醫療資源的專業平台。</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">回首頁</a></li>
+                        <li><a href="science.html" class="hover:text-white">幹細胞科學</a></li>
+                        <li><a href="applications.html" class="hover:text-white">臨床案例</a></li>
+                        <li><a href="faq.html" class="hover:text-white">常見問題</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">聯絡資訊</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> ubeeps@gmail.com</li>
+                        <li><a href="https://wa.me/85263810907" target="_blank" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp: +852 6381 0907</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">免責聲明</h3>
+                    <p class="text-xs leading-relaxed">
+                        本網站內容僅供衛教資訊參考，不能取代專業醫療診斷。具體治療方案需由醫師親自評估。
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs">
+                &copy; 2024 Ubeeps. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Script -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

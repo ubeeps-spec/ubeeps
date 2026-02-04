@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臨床應用 | 優生 Ubeeps - 再生醫學適應症</title>
+    <meta name="description" content="深入了解再生醫學在糖尿病、退化性關節炎、神經系統損傷及抗衰老領域的臨床應用與治療潛力。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490', // Cyan 700
+                        secondary: '#155e75', // Cyan 800
+                        accent: '#06b6d4', // Cyan 500
+                        light: '#ecfeff', // Cyan 50
+                        'brand-dark': '#0C2D37', // Custom Dark Background
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-dark shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <!-- Logo Placeholder -->
+                        <img src="images/logo.png" alt="Ubeeps Logo" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        <span class="text-2xl font-bold text-white tracking-wider" style="display:none">Ubeeps <span class="text-sm font-normal text-gray-200">優生醫療諮詢</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent transition">首頁</a>
+                    <a href="about.html" class="text-white hover:text-accent transition">關於我們</a>
+                    <a href="science.html" class="text-white hover:text-accent transition">幹細胞科學</a>
+                    <a href="applications.html" class="text-accent font-bold transition">臨床應用</a>
+                    <a href="faq.html" class="text-white hover:text-accent transition">常見問題</a>
+                    <a href="news.html" class="text-white hover:text-accent transition">最新消息</a>
+                    <a href="index.html#contact" class="bg-white text-primary px-6 py-2 rounded-full hover:bg-gray-100 transition shadow-lg">立即諮詢</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">關於我們</a>
+                <a href="science.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">幹細胞科學</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">臨床應用</a>
+                <a href="faq.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">常見問題</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">最新消息</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-brand-dark bg-white hover:bg-gray-100 mt-4 text-center transition">立即諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-brand-dark to-primary text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-6">臨床應用與適應症</h1>
+            <p class="text-xl text-cyan-100 max-w-2xl mx-auto">
+                針對不同疾病的再生醫學解決方案，為您的健康提供傳統治療以外的<span class="whitespace-nowrap">新選擇。</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- Diabetes -->
+        <section id="diabetes" class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 bg-gray-200 relative min-h-[300px]">
+                <img src="images/diabetes_finger.jpg" alt="Diabetes" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 text-sm font-bold rounded-full">重點項目</div>
+            </div>
+            <div class="lg:w-2/3 p-8 lg:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">糖尿病 (Diabetes)</h2>
+                <h3 class="text-xl text-primary font-bold mb-6">胰島 β 細胞再生與功能修復</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    傳統糖尿病治療往往只能依賴藥物或胰島素控制血糖，無法解決胰島功能衰退的根本問題。ImStem 的 PL11S-TMSC 技術，結合獨家「胰腺內動脈導管遞送」，能將高活性的幹細胞精準送達胰腺。
+                </p>
+                <div class="bg-blue-50 border-l-4 border-primary p-4 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">治療優勢</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>促進再生：</strong>誘導內源性胰島 β 細胞再生，恢復胰島素分泌功能。</li>
+                        <li><strong>免疫調節：</strong>改善慢性發炎狀態，減少對胰島細胞的自身免疫攻擊。</li>
+                        <li><strong>併發症預防：</strong>改善全身微循環，預防糖尿病足、視網膜病變與腎病變。</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">諮詢糖尿病方案</a>
+            </div>
+        </section>
+
+        <!-- Joints -->
+        <section id="joints" class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row-reverse">
+            <div class="lg:w-1/3 bg-gray-200 relative min-h-[300px]">
+                <img src="images/knee_xray.jpg" alt="Joints" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="lg:w-2/3 p-8 lg:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">退化性關節炎 (Osteoarthritis)</h2>
+                <h3 class="text-xl text-primary font-bold mb-6">軟骨修復與抗炎止痛</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    隨著年齡增長或過度使用，關節軟骨磨損會導致疼痛與行動不便。間質幹細胞 (MSC) 具有強大的分化潛能與抗炎作用，是「保膝不換膝」的理想選擇。
+                </p>
+                <div class="bg-blue-50 border-l-4 border-primary p-4 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">治療機制</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>軟骨再生：</strong>分化為軟骨細胞，填補磨損的關節表面。</li>
+                        <li><strong>抑制發炎：</strong>分泌抗炎因子，顯著緩解關節紅腫熱痛。</li>
+                        <li><strong>潤滑關節：</strong>促進關節液分泌，改善關節活動度。</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">諮詢關節修復方案</a>
+            </div>
+        </section>
+
+        <!-- Autoimmune -->
+        <section id="immune" class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 bg-gray-200 relative min-h-[300px]">
+                <img src="images/dna_helix.jpg" alt="Autoimmune" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="lg:w-2/3 p-8 lg:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">自體免疫疾病 (Autoimmune Diseases)</h2>
+                <h3 class="text-xl text-primary font-bold mb-6">免疫系統的雙向調節</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    針對紅斑性狼瘡 (SLE)、類風濕性關節炎 (RA)、乾癬等疾病，幹細胞能發揮獨特的「免疫調節」作用，而非單純的免疫抑制，從而減少類固醇與免疫抑制劑的副作用。
+                </p>
+                <div class="bg-blue-50 border-l-4 border-primary p-4 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">適用範疇</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>系統性紅斑狼瘡：</strong>改善腎臟與皮膚症狀，穩定病情。</li>
+                        <li><strong>類風濕性關節炎：</strong>減緩骨質破壞，控制晨僵與疼痛。</li>
+                        <li><strong>頑固性皮膚病：</strong>如乾癬、異位性皮膚炎的深層修復。</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">諮詢免疫調節方案</a>
+            </div>
+        </section>
+
+        <!-- Neurology -->
+        <section id="neurology" class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row-reverse">
+            <div class="lg:w-1/3 bg-gray-200 relative min-h-[300px]">
+                <img src="images/neural_network.jpg" alt="Neurology" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="lg:w-2/3 p-8 lg:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">神經系統修復 (Neurology)</h2>
+                <h3 class="text-xl text-primary font-bold mb-6">重建神經網絡連結</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    神經細胞一旦受損極難再生。幹細胞療法為中風後遺症、帕金森氏症、脊髓損傷患者帶來了新希望，透過分泌神經營養因子 (NGF, BDNF) 促進神經修復與軸突生長。
+                </p>
+                <div class="bg-blue-50 border-l-4 border-primary p-4 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">改善目標</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>中風復健：</strong>改善肢體運動功能、語言能力與吞嚥功能。</li>
+                        <li><strong>退化性腦病：</strong>延緩阿茲海默症與帕金森氏症的進程。</li>
+                        <li><strong>脊髓損傷：</strong>促進感覺與運動神經傳導的恢復。</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">諮詢神經修復方案</a>
+            </div>
+        </section>
+
+        <!-- Anti-aging -->
+        <section id="anti-aging" class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 bg-gray-200 relative min-h-[300px]">
+                <img src="images/active_senior_woman.jpg" alt="Anti-aging" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="lg:w-2/3 p-8 lg:p-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">抗衰老與亞健康 (Anti-aging)</h2>
+                <h3 class="text-xl text-primary font-bold mb-6">從細胞層面重返年輕</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    衰老的本質是幹細胞數量的減少與活性的降低。透過補充高品質的外源性幹細胞，可以激活體內休眠的細胞，提升整體代謝水平，改善睡眠、體力與皮膚狀況。
+                </p>
+                <div class="bg-blue-50 border-l-4 border-primary p-4 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">預期效益</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>機能提升：</strong>改善慢性疲勞、提升專注力與記憶力。</li>
+                        <li><strong>外觀年輕化：</strong>皮膚緊緻度提升、皺紋減少、氣色紅潤。</li>
+                        <li><strong>男性/女性保養：</strong>改善性功能與更年期症狀。</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">諮詢抗衰老方案</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Ubeeps 優生醫療</h3>
+                    <p class="text-sm">致力於推動再生醫學資訊透明化，連結病患與合規醫療資源的專業平台。</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">回首頁</a></li>
+                        <li><a href="about.html" class="hover:text-white">關於我們</a></li>
+                        <li><a href="faq.html" class="hover:text-white">常見問題</a></li>
+                        <li><a href="news.html" class="hover:text-white">最新消息</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">聯絡資訊</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> ubeeps@gmail.com</li>
+                        
+                        <li><a href="https://wa.me/85263810907" target="_blank" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp: +852 6381 0907</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">免責聲明</h3>
+                    <p class="text-xs leading-relaxed">
+                        本網站內容僅供衛教資訊參考，不能取代專業醫療診斷。具體治療方案需由醫師親自評估。
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs">
+                &copy; 2024 Ubeeps. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Chatbot Script -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

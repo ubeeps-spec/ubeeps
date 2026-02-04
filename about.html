@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 | 優生 Ubeeps - 科學、中立、合規</title>
+    <meta name="description" content="Ubeeps 優生醫療諮詢致力於連結全球頂尖再生醫學資源，提供科學、中立且合規的醫療轉介服務。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490', // Cyan 700
+                        secondary: '#155e75', // Cyan 800
+                        accent: '#06b6d4', // Cyan 500
+                        light: '#ecfeff', // Cyan 50
+                        'brand-dark': '#0C2D37', // Custom Dark Background
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-dark shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <!-- Logo Placeholder -->
+                        <img src="images/logo.png" alt="Ubeeps Logo" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        <span class="text-2xl font-bold text-white tracking-wider" style="display:none">Ubeeps <span class="text-sm font-normal text-gray-200">優生醫療諮詢</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent transition">首頁</a>
+                    <a href="about.html" class="text-accent font-bold transition">關於我們</a>
+                    <a href="science.html" class="text-white hover:text-accent transition">幹細胞科學</a>
+                    <a href="index.html#applications" class="text-white hover:text-accent transition">臨床應用</a>
+                    <a href="faq.html" class="text-white hover:text-accent transition">常見問題</a>
+                    <a href="index.html#contact" class="bg-white text-primary px-6 py-2 rounded-full hover:bg-gray-100 transition shadow-lg">立即諮詢</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">關於我們</a>
+                <a href="science.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">幹細胞科學</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">臨床應用</a>
+                <a href="faq.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">常見問題</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">最新消息</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-brand-dark bg-white hover:bg-gray-100 mt-4 text-center transition">立即諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-brand-dark to-primary text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-6">關於 Ubeeps 優生醫療</h1>
+            <p class="text-xl text-cyan-100 max-w-2xl mx-auto">
+                連結全球頂尖再生醫學資源，為您的健康尋找新轉機。
+            </p>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">我們的使命</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        在再生醫學日新月異的今天，資訊的不對稱往往讓患者在尋求治療時感到迷惘與無助。Ubeeps 成立的初衷，就是為了打破這道藩籬。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        我們堅持<span class="font-bold text-primary">「科學為本、中立導向、合規透明」</span>的三大原則，嚴選全球具備頂尖技術與合法資質的醫療機構（如 ImStem 醫學中心、華大基因），為深受慢性病與退化性疾病困擾的患者，提供一條安全、可靠的海外醫療綠色通道。
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="images/medical_team_v3.jpg" alt="Medical Team" class="rounded-lg shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-lg shadow-lg hidden md:block">
+                        <p class="font-bold text-2xl">100%</p>
+                        <p class="text-sm">合規醫療機構</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">核心價值</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-light text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">科學嚴謹</h3>
+                    <p class="text-gray-600 text-sm">拒絕偽科學與誇大宣傳。我們提供的每一項醫療資訊，皆基於已發表的學術文獻與臨床數據。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-light text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">中立客觀</h3>
+                    <p class="text-gray-600 text-sm">作為第三方諮詢平台，我們站在患者的角度，客觀評估不同療程的適用性，不盲目推銷。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-light text-primary rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">合規安全</h3>
+                    <p class="text-gray-600 text-sm">僅合作符合 GMP 標準與當地衛生法規的醫療機構，確保治療過程的安全性與合法性。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Ubeeps 優生醫療</h3>
+                    <p class="text-sm">致力於推動再生醫學資訊透明化，連結病患與合規醫療資源的專業平台。</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">回首頁</a></li>
+                        <li><a href="about.html" class="hover:text-white">關於我們</a></li>
+                        <li><a href="faq.html" class="hover:text-white">常見問題</a></li>
+                        <li><a href="news.html" class="hover:text-white">最新消息</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">聯絡資訊</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> ubeeps@gmail.com</li>
+                        
+                        <li><a href="https://wa.me/85263810907" target="_blank" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp: +852 6381 0907</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">免責聲明</h3>
+                    <p class="text-xs leading-relaxed">
+                        本網站內容僅供衛教資訊參考，不能取代專業醫療診斷。具體治療方案需由醫師親自評估。
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs">
+                &copy; 2024 Ubeeps. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Chatbot Script -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

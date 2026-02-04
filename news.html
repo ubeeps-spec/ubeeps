@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息 | 優生 Ubeeps - 再生醫學前沿</title>
+    <meta name="description" content="追蹤最新的幹細胞研究進展、ImStem 臨床案例分享與 Ubeeps 平台公告。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490', // Cyan 700
+                        secondary: '#155e75', // Cyan 800
+                        accent: '#06b6d4', // Cyan 500
+                        light: '#ecfeff', // Cyan 50
+                        'brand-dark': '#0C2D37', // Custom Dark Background
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-dark shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                         <!-- Logo Placeholder -->
+                         <img src="images/logo.png" alt="Ubeeps Logo" class="h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                         <span class="text-2xl font-bold text-white tracking-wider" style="display:none">Ubeeps <span class="text-sm font-normal text-gray-200">優生醫療諮詢</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent transition">首頁</a>
+                    <a href="about.html" class="text-white hover:text-accent transition">關於我們</a>
+                    <a href="science.html" class="text-white hover:text-accent transition">幹細胞科學</a>
+                    <a href="index.html#applications" class="text-white hover:text-accent transition">臨床應用</a>
+                    <a href="faq.html" class="text-white hover:text-accent transition">常見問題</a>
+                    <a href="news.html" class="text-accent font-bold transition">最新消息</a>
+                    <a href="index.html#contact" class="bg-white text-primary px-6 py-2 rounded-full hover:bg-gray-100 transition shadow-lg">立即諮詢</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">關於我們</a>
+                <a href="science.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">幹細胞科學</a>
+                <a href="applications.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">臨床應用</a>
+                <a href="faq.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">常見問題</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-accent hover:bg-white/10 transition">最新消息</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-bold text-brand-dark bg-white hover:bg-gray-100 mt-4 text-center transition">立即諮詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-brand-dark to-primary pt-32 pb-12 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-white">最新消息與研究進展</h1>
+        </div>
+    </header>
+
+    <!-- News List -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- News Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/news_stanford.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Stanford Research">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-primary font-bold mb-2 uppercase tracking-wide">科研突破</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">史丹佛大學研究：動脈導管遞送顯著提升幹細胞歸巢效率</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            最新發表於《幹細胞研究與治療》的期刊指出，透過動脈導管直接遞送，細胞在靶器官的留存率是傳統靜脈注射的數倍以上...
+                        </p>
+                        <a href="news_stanford.html" class="text-primary font-bold hover:underline text-sm">閱讀更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/diabetes.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Diabetes Case">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-accent font-bold mb-2 uppercase tracking-wide">臨床案例</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">56歲糖尿病患者的逆轉之旅：告別胰島素的一年</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            來自香港的陳先生，在接受 ImStem 珠海中心的 PL11S-TMSC 治療後，糖化血色素從 8.5% 降至 6.2%，成功實現功能性緩解...
+                        </p>
+                        <a href="news_diabetes.html" class="text-primary font-bold hover:underline text-sm">閱讀更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="images/news_bgi.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="BGI Partnership">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-secondary font-bold mb-2 uppercase tracking-wide">合作公告</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ubeeps 與華大基因 (BGI) 達成戰略合作</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            為提供更全面的健康管理服務，Ubeeps 正式引入華大基因的精準檢測與國家級細胞儲存服務，為您的健康資產保駕護航...
+                        </p>
+                        <a href="news_bgi.html" class="text-primary font-bold hover:underline text-sm">閱讀更多 <i class="fas fa-arrow-right ml-1"></i></a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Ubeeps 優生醫療</h3>
+                    <p class="text-sm">致力於推動再生醫學資訊透明化，連結病患與合規醫療資源的專業平台。</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">回首頁</a></li>
+                        <li><a href="about.html" class="hover:text-white">關於我們</a></li>
+                        <li><a href="faq.html" class="hover:text-white">常見問題</a></li>
+                        <li><a href="news.html" class="hover:text-white">最新消息</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">聯絡資訊</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> ubeeps@gmail.com</li>
+                        
+                        <li><a href="https://wa.me/85263810907" target="_blank" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp: +852 6381 0907</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">免責聲明</h3>
+                    <p class="text-xs leading-relaxed">
+                        本網站內容僅供衛教資訊參考，不能取代專業醫療診斷。具體治療方案需由醫師親自評估。
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs">
+                &copy; 2024 Ubeeps. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Chatbot Script -->
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
