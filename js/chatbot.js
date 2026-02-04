@@ -65,9 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
-                <div class="text-center mt-1">
-                    <span class="text-[10px] text-gray-400">由 AI 驅動，僅供參考</span>
-                </div>
             </div>
         </div>
 
